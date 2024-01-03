@@ -1,3 +1,4 @@
+// header 
 const otherBtn = document.querySelector(".other");
 const link = document.querySelectorAll("a");
 const megaMenu = document.querySelector(".mega-menu");
@@ -27,3 +28,4 @@ document.addEventListener("click", (event) => {
 megaMenu.addEventListener("click", (event) => {
   event.stopPropagation(); // Or event.stopImmediatePropagation();
 });
+// header 
