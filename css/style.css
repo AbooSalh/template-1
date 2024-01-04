@@ -135,13 +135,14 @@ header .container > .links > li > span:hover::before {
   display: flex;
   justify-content: space-around;
   gap: 40px;
-  top: calc(72px);
+  top: calc(100px);
   opacity: 0;
   transition: top var(--main-transition), opacity var(--main-transition);
   /* margin: 15px auto; */
 }
 .mega-menu.active {
   opacity: 1;
+  top: 72px;
 }
 
 .mega-menu .image {
