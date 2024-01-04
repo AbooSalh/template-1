@@ -1,4 +1,4 @@
-// header 
+// header
 const otherBtn = document.querySelector(".other");
 const link = document.querySelectorAll("a");
 const megaMenu = document.querySelector(".mega-menu");
@@ -32,4 +32,38 @@ document.addEventListener("click", (event) => {
 megaMenu.addEventListener("click", (event) => {
   event.stopPropagation(); // Or event.stopImmediatePropagation();
 });
-// header 
+// header
+// s heading
+const sHeadings = document.querySelectorAll(".s-heading");
+sHeadings.forEach((sheading) => {
+  sheading.addEventListener("mouseenter", (e) => {
+    console.log("gg");
+    addAnimationClass("animate", 0);
+    addAnimationClass("sanimate", 30);
+    e.stopPropagation();
+  });
+  sheading.addEventListener("mouseleave", (e) => {
+    if (sheading.classList.contains("sanimate")) {
+      removeAnimationClass("animate", 30);
+      removeAnimationClass("sanimate", 0);
+      removeAnimationClass("animate", 30);
+      removeAnimationClass("sanimate", 0);
+      e.stopPropagation();
+    } else {
+      removeAnimationClass("sanimate", 0);
+      removeAnimationClass("animate", 30);
+      e.stopPropagation();
+    }
+  });
+  function addAnimationClass(className, delay) {
+    setTimeout(() => {
+      sheading.classList.add(className);
+    }, delay);
+  }
+  function removeAnimationClass(className, delay) {
+    setTimeout(() => {
+      sheading.classList.remove(className);
+    }, delay);
+  }
+});
+// end s heading
