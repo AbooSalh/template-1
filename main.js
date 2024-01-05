@@ -37,7 +37,6 @@ megaMenu.addEventListener("click", (event) => {
 const sHeadings = document.querySelectorAll(".s-heading");
 sHeadings.forEach((sheading) => {
   sheading.addEventListener("mouseenter", (e) => {
-
     addAnimationClass("animate", 0);
     addAnimationClass("sanimate", 30);
     e.stopPropagation();

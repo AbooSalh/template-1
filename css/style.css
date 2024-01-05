@@ -366,6 +366,7 @@ header .mega-menu .links li::before {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 40px;
+  padding-bottom: var(--main-padding-bottom);
 }
 .articles .container .box {
   box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
