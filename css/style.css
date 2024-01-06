@@ -12,7 +12,7 @@
 :root {
   --main-color: #2196f3;
   --main-color-alt: #1787e0;
-  --main-transition: 0.3s;
+  --main-transition: 0.2s;
   --main-padding-top: 100px;
   --main-padding-bottom: 100px;
   --section-background: #ececec;
@@ -194,8 +194,8 @@ header .container > .links > li > span:hover::before {
 /* mega menu */
 .mega-menu {
   position: absolute;
-  width: 80%;
-  left: 10%;
+  width: 100%;
+  left: 0;
   padding: 30px;
   background-color: rgb(255, 255, 255);
   border-bottom: 3px solid var(--main-color);
@@ -217,6 +217,7 @@ header .container > .links > li > span:hover::before {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 30%;
 }
 .mega-menu img {
   width: 100%;
@@ -270,7 +271,7 @@ header .mega-menu .links li::before {
 }
 @media (max-width: 767px) {
   .mega-menu {
-    top: 144px;
+    margin: 72px auto;
   }
 }
 
@@ -435,12 +436,12 @@ header .mega-menu .links li::before {
   position: relative;
   overflow: hidden;
 }
-.gallery  .image::before {
+.gallery .image::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.205);
   width: 0;
   height: 0;
@@ -458,10 +459,11 @@ header .mega-menu .links li::before {
   transform: rotate(5deg) scale(1.1);
 }
 @keyframes flashing {
-  0%,40%{
+  0%,
+  40% {
     opacity: 1;
   }
-  100%{
+  100% {
     opacity: 0;
     width: 200%;
     height: 200%;
