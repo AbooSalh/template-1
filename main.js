@@ -65,7 +65,6 @@ sHeadings.forEach((sheading) => {
       sheading.classList.contains("sanimate") &&
       !sheading.classList.contains("animate")
     ) {
-      console.log("dd");
       removeAnimationClass("sanimate", 0);
     }
   });
