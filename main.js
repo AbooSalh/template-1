@@ -33,26 +33,20 @@ megaMenu.addEventListener("click", (event) => {
   event.stopPropagation(); // Or event.stopImmediatePropagation();
 });
 // header
+
 // s heading
 const sHeadings = document.querySelectorAll(".s-heading");
 sHeadings.forEach((sheading) => {
+  // stop before and after
   sheading.addEventListener("mouseenter", (e) => {
     addAnimationClass("animate", 0);
     addAnimationClass("sanimate", 30);
     e.stopPropagation();
   });
   sheading.addEventListener("mouseleave", (e) => {
-    if (sheading.classList.contains("sanimate")) {
-      removeAnimationClass("animate", 30);
-      removeAnimationClass("sanimate", 0);
-      removeAnimationClass("animate", 30);
-      removeAnimationClass("sanimate", 0);
-      e.stopPropagation();
-    } else {
-      removeAnimationClass("sanimate", 0);
-      removeAnimationClass("animate", 30);
-      e.stopPropagation();
-    }
+    removeAnimationClass("sanimate", 0);
+    removeAnimationClass("animate", 30);
+    e.stopPropagation();
   });
   function addAnimationClass(className, delay) {
     setTimeout(() => {
@@ -64,5 +58,16 @@ sHeadings.forEach((sheading) => {
       sheading.classList.remove(className);
     }, delay);
   }
-});
+
+  // debug when the sanimate class without animate
+  setInterval(() => {
+    if (
+      sheading.classList.contains("sanimate") &&
+      !sheading.classList.contains("animate")
+    ) {
+      console.log("dd");
+      removeAnimationClass("sanimate", 0);
+    }
+  });
+}, 30);
 // end s heading
