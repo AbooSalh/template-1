@@ -15,11 +15,11 @@ img {
 :root {
   --main-color: #2196f3;
   --main-color-alt: #1787e0;
-  --main-transition: 0.2s;
+  --main-transition: 0.3s;
   --main-padding-top: 100px;
   --main-padding-bottom: 100px;
   --section-background: #ececec;
-  --secondary-tarnsition: 0.5s;
+  --secondary-tarnsition: 0.4s;
 }
 .no-events {
   pointer-events: none;
@@ -497,7 +497,7 @@ header .mega-menu .links li::before {
   border-style: solid;
   border-width: 0px 0px 170px 500px;
   border-color: transparent transparent white transparent;
-  transition: var(--secondary-tarnsition);
+  transition: var(--main-transition);
 }
 .features .box .img-holder::before {
   content: "";
@@ -522,6 +522,7 @@ header .mega-menu .links li::before {
   display: inline-block;
   padding: 12px 30px;
   border: 3px solid var(--main-color);
+  transition: var(--secondary-tarnsition);
   border-radius: 5px;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -532,15 +533,23 @@ header .mega-menu .links li::before {
 .features .quality a {
   color: #f44036;
   border-color: #f44036;
+  background: linear-gradient(to right, #f44036 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
 }
 .features .passion a {
   color: #03a9f4;
   border-color: #03a9f4;
+  background: linear-gradient(to right, #03a9f4 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
 }
 .features .time a {
   color: #009688;
   border-color: #009688;
-  transition: var(--secondary-tarnsition);
+  background: linear-gradient(to right, #009688 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
 }
 .features .quality .img-holder::before
 /* ,.features .quality .img-holder::after  */ {
@@ -554,5 +563,8 @@ header .mega-menu .links li::before {
 /* ,.features .passion .img-holder::after */ {
   background-color: rgb(3 169 244 / 60%);
 }
-
+.features .box:hover a {
+  background-position: left bottom;
+  color: white;
+}
 /* end features */
