@@ -577,8 +577,9 @@ header .mega-menu .links li::before {
 }
 .testimonials .box {
   background-color: white;
-  padding: 10px;
+  padding: 20px;
   position: relative;
+  border-radius: 5px;
 }
 .testimonials .box img {
   position: absolute;
@@ -595,8 +596,11 @@ header .mega-menu .links li::before {
 .testimonials .box i:last-child {
   color: black;
 }
+.testimonials .box .rate {
+  margin-bottom: 3px;
+}
 .testimonials .box i {
-  margin-top: 20px;
+  margin-top: 10px;
   color: gold;
 }
 .testimonials .box p {
