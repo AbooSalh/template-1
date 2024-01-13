@@ -1,38 +1,48 @@
-// header
 const otherBtn = document.querySelector(".other");
 const link = document.querySelectorAll("a");
 const megaMenu = document.querySelector(".mega-menu");
 const landingContainer = document.querySelector(".landing .container");
-// Event listener for the "other link" to toggle the mega menu
 
-otherBtn.addEventListener("click", (_) => {
-  megaMenu.classList.toggle("active");
+const toggleMegaMenu = () => {
+  if (!megaMenu.classList.contains("active")) {
+    setTimeout(() => megaMenu.classList.add("sactive"), 0);
+    setTimeout(() => megaMenu.classList.add("active"), 50);
+  } else {
+    setTimeout(() => megaMenu.classList.remove("sactive"), 50);
+    setTimeout(() => megaMenu.classList.remove("active"));
+  }
+
   landingContainer.classList.toggle("active");
-});
+};
+
+otherBtn.addEventListener("click", toggleMegaMenu);
+
 link.forEach((l) => {
-  l.addEventListener("click", (_) => {
+  l.addEventListener("click", () => {
     megaMenu.classList.remove("active");
     landingContainer.classList.remove("active");
   });
 });
-// Event listener for clicks outside the mega menu and "other link"
-document.addEventListener("click", (event) => {
-  if (
+
+const closeMegaMenu = (event) => {
+  const isOutsideMegaMenu =
     !megaMenu.contains(event.target) &&
     !otherBtn.contains(event.target) &&
-    !event.target.closest(".mega-menu") && // Adjusted condition
-    !megaMenu.isSameNode(event.target)
-  ) {
+    !event.target.closest(".mega-menu") &&
+    !megaMenu.isSameNode(event.target);
+
+  if (isOutsideMegaMenu) {
     megaMenu.classList.remove("active");
     landingContainer.classList.remove("active");
   }
-});
+};
+
+document.addEventListener("click", closeMegaMenu);
 
 // Optional: Prevent click propagation within megaMenu
 megaMenu.addEventListener("click", (event) => {
-  event.stopPropagation(); // Or event.stopImmediatePropagation();
+  event.stopPropagation();
 });
-// header
 
 // s heading
 const sHeadings = document.querySelectorAll(".s-heading");
