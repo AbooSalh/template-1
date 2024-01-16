@@ -1,3 +1,4 @@
+////////////////////////////////////////////////////
 const otherBtn = document.querySelector(".other");
 const link = document.querySelectorAll("a");
 const megaMenu = document.querySelector(".mega-menu");
@@ -43,7 +44,7 @@ document.addEventListener("click", closeMegaMenu);
 megaMenu.addEventListener("click", (event) => {
   event.stopPropagation();
 });
-
+//////////////////////////////////////////////////////////
 // s heading
 const sHeadings = document.querySelectorAll(".s-heading");
 sHeadings.forEach((sheading) => {
