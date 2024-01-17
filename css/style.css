@@ -818,5 +818,51 @@ header .mega-menu .links li::before {
     display: none;
   }
 }
-
 /* end our skills */
+/* start how it works  */
+.work-steps {
+  background-color: var(--section-background);
+}
+.work-steps .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+.work-steps .container .box {
+  background-color: #f6f5f5;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  border: 2px solid white;
+  position: relative;
+  z-index: 1;
+}
+.work-steps .container .box img {
+  width: 64px;
+  margin-right: 30px;
+}
+@media (max-width: 1000px) {
+  .work-steps .container {
+    flex-direction: column;
+  }
+}
+.work-steps .container .box::before {
+  content: "";
+  height: 0%;
+  width: 0%;
+  position: absolute;
+  background-color: var(--section-background);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: var(--main-transition);
+  z-index: -1;
+}
+.work-steps .container .box:hover::before {
+  height: 100%;
+  width: 100%;
+}
+/* end how it works  */
