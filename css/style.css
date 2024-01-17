@@ -779,3 +779,44 @@ header .mega-menu .links li::before {
   transform: skewX(-30deg);
 }
 /* end services */
+/* start our skills */
+.our-skills .container {
+  display: flex;
+}
+.our-skills .container .skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 1;
+}
+.our-skills .container .skills h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+.our-skills .container .skills h3 span {
+  color: var(--main-color);
+  border: solid 1px var(--section-background);
+  font-size: 12px;
+  padding: 5px;
+  font-weight: unset;
+}
+.our-skills .container .skills .progress {
+  height: 20px;
+  width: 100%;
+  margin-top: 10px;
+  background-color: var(--section-background);
+}
+.our-skills .container .skills .progress span {
+  display: inline-block;
+  background-color: var(--main-color);
+  height: 100%;
+}
+@media (max-width: 1000px) {
+  .our-skills .container img {
+    display: none;
+  }
+}
+
+/* end our skills */
