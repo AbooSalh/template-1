@@ -857,7 +857,7 @@ header .mega-menu .links li::before {
   background-color: var(--section-background);
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   transition: var(--main-transition);
   z-index: -1;
 }
@@ -866,3 +866,93 @@ header .mega-menu .links li::before {
   width: 100%;
 }
 /* end how it works  */
+/* start events */
+.events .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.events .container img {
+  max-width: 450px;
+}
+.events .container .info {
+  flex: 1;
+}
+.events .container .info .time {
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+  gap: 10px;
+  justify-content: center;
+}
+.events .container .info .time div {
+  border: 1px solid #d4d4d4;
+  border-radius: 6px;
+  text-align: center;
+  width: 75px;
+  transition: var(--main-transition);
+}
+.events .container .time span {
+  display: block;
+  transition: var(--main-transition);
+}
+.events .container .time span:first-child {
+  font-size: 35px;
+  padding: 15px;
+  color: var(--main-color);
+  font-weight: bold;
+}
+.events .container .time span:last-child {
+  padding: 8px 10px;
+  font-size: 13px;
+  border-top: 1px solid #d4d4d4;
+}
+.events .container h3 {
+  text-align: center;
+  margin: 40px 0 30px;
+  font-size: 30px;
+}
+.events .container p {
+  text-align: center;
+  line-height: 1.7;
+  font-size: 19px;
+  color: #777;
+}
+@media (max-width: 991px) {
+  .events img {
+    display: none;
+  }
+}
+.events .subscribe {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+.events .subscribe form {
+  padding: 50px;
+  width: 400px;
+  margin: 20px auto;
+  background-color: var(--section-background);
+  border-radius: 50px;
+  padding: 30px 40px;
+  display: flex;
+  gap: 20px;
+}
+.events .subscribe form input[type="email"] {
+  padding: 20px;
+  border-radius: 50px;
+  border: none;
+  caret-color: var(--main-color);
+  flex: 1;
+}
+.events .subscribe form input[type="submit"] {
+  border-radius: 50px;
+  border: none;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+/* end events */
