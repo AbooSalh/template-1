@@ -1070,3 +1070,50 @@ header .mega-menu .links li::before {
   border-color: transparent transparent #f6f6f6;
 }
 /* end pricing */
+/* start video */
+.video .holder {
+  display: flex;
+  justify-content: center;
+  background-color: var(--section-background);
+  border: 1px solid #ddd;
+}
+.video .holder .list {
+  min-width: 300px;
+  background-color: white;
+}
+.video .holder .list .name {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.video .holder .list ul li {
+  padding: 20px;
+  border-top: 1px solid var(--section-background);
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.video .holder ul li span {
+  display: block;
+  margin-top: 10px;
+  color: #777;
+}
+.video .holder .preview {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
+}
+.video .holder .preview .info {
+  padding: 20px;
+  background-color: white;
+  margin-top: 10px;
+}
+@media (max-width: 991px) {
+  .video .holder {
+    flex-direction: column;
+  }
+}
+/* end video */
