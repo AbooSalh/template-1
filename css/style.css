@@ -1116,4 +1116,9 @@ header .mega-menu .links li::before {
     flex-direction: column;
   }
 }
+.video .holder .list ul li:hover
+{
+  background-color: #fafafa;
+  color: var(--main-color);
+}
 /* end video */
