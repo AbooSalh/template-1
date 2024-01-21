@@ -9,8 +9,8 @@ const toggleMegaMenu = () => {
     setTimeout(() => megaMenu.classList.add("sactive"), 0);
     setTimeout(() => megaMenu.classList.add("active"), 50);
   } else {
-    setTimeout(() => megaMenu.classList.remove("sactive"), 50);
-    setTimeout(() => megaMenu.classList.remove("active"));
+    setTimeout(() => megaMenu.classList.remove("sactive"), 110);
+    setTimeout(() => megaMenu.classList.remove("active") ,0);
   }
 
   landingContainer.classList.toggle("active");
