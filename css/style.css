@@ -1116,9 +1116,66 @@ header .mega-menu .links li::before {
     flex-direction: column;
   }
 }
-.video .holder .list ul li:hover
-{
+.video .holder .list ul li:hover {
   background-color: #fafafa;
   color: var(--main-color);
 }
 /* end video */
+/* start stats */
+.stats {
+  background-image: url(../imgs/stats.jpg);
+  position: relative;
+}
+.stats::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255 255 255 / 95%);
+}
+.stats .box {
+  background-color: white;
+  padding: 30px 15px;
+  text-align: center;
+  position: relative;
+  opacity: 0.8;
+  transition: var(--main-transition);
+  z-index: 999;
+}
+.stats .box::before,
+.stats .box::after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  height: 0%;
+  width: 2px;
+  transition: var(--main-transition);
+}
+.stats .box::before {
+  bottom: 0;
+  left: 0;
+}
+.stats .box::after {
+  top: 0;
+  right: 0;
+}
+.stats .box:hover::before,
+.stats .box:hover::after {
+  height: 100%;
+}
+.stats .box .number {
+  display: block;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.stats .box .text {
+  color: var(--main-color);
+  font-style: italic;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* end stats */
