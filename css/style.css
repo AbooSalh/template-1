@@ -1259,3 +1259,84 @@ header .mega-menu .links li::before {
   transition: var(--main-transition);
 }
 /* end discount */
+/* start footer */
+footer {
+  background-color: #191919;
+  padding-top: 30px;
+}
+footer .box h3 {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+footer .box ul {
+  display: flex;
+}
+footer .box ul li {
+  margin-right: 10px;
+}
+footer .box ul li a {
+  background-color: #313131;
+  color: #b9b9b9;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  transition: var(--main-transition);
+}
+footer .box p {
+  color: #b9b9b9;
+  line-height: 2;
+  margin-top: 10px;
+}
+footer .box:nth-child(2) ul {
+  display: flex;
+  flex-direction: column;
+}
+footer .box:nth-child(2) ul li {
+  padding: 15px 0;
+  transition: var(--main-transition);
+  color: #b9b9b9;
+  cursor: pointer;
+}
+footer .box:nth-child(2) ul li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\F101";
+  font-weight: 900;
+  margin-right: 10px;
+  color: var(--main-color);
+}
+footer .box:nth-child(2) ul li:hover {
+  color: white;
+  padding-left: 10px;
+}
+footer .box:nth-child(2) ul li:not(:last-child) {
+  border-bottom: 1px solid #444;
+}
+footer .box:nth-child(3) .line {
+  display: flex;
+  align-items: center;
+  color: #b9b9b9;
+  margin-bottom: 30px;
+}
+footer .box:nth-child(3) .line i {
+  color: var(--main-color);
+  font-size: 20px;
+  margin-right: 10px;
+}
+footer .box:nth-child(4) img {
+  width: 78px;
+  border: 3px solid white;
+  margin: 2px;
+}
+footer > p {
+  padding: 25px 0;
+  text-align: center;
+  color: white;
+  margin: 50px 0 0;
+  border-top: 1px solid #444;
+}
+/* end footer */
